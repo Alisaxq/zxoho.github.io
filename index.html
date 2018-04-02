@@ -177,16 +177,10 @@
 <blockquote>
 <p>Java 8的一个大亮点是引入Lambda表达式，使用它设计的代码会更加简洁。当开发者在编写Lambda表达式时，也会随之被编译成一个函数式接口。下面这个例子就是使用Lambda语法来代替匿名的内部类，代码不仅简洁，而且还可读。(仅代表官方看法)</p>
 </blockquote>
-<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522688827411&di=2dc515bbff73535cb7c1de296e7a8eb7&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201707%2F20%2F040539c7mm7t2azn57gvvm.png" width="200" height="140"></p>
-<ul>
-<li><p>old</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">List costList = new Arrays.asList(100,200,300) ;</span><br><span class="line">for(Integet cost : costList) &#123;</span><br><span class="line">  Integet num = cost += 5;</span><br><span class="line">  System.out.println(num);</span><br><span class="line">&#125;</span><br><span class="line">//结果</span><br><span class="line">105</span><br><span class="line">205</span><br><span class="line">305</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Java8</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//函数式编程概念map,它允许你将对象进行转换</span><br><span class="line">List costList = new Arrays.asList(100,200,300) ;</span><br><span class="line">costList.steam().map((cost) -&gt; cost += 5).foreach(System.out::println);</span><br><span class="line">//结果</span><br><span class="line">105</span><br><span class="line">205</span><br><span class="line">305</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
+<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522688827411&di=2dc515bbff73535cb7c1de296e7a8eb7&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201707%2F20%2F040539c7mm7t2azn57gvvm.png" width="200" height="140"><br>
+        
+          <a class="article-more-a" href="/2018/04/02/Lambda表达式学习（一）/#more">more >></a>
+        
       
 
       
