@@ -152,6 +152,108 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Lambda表达式学习（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/02/Lambda表达式学习（一）/">Lambda表达式学习（一）</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/02/Lambda表达式学习（一）/" class="archive-article-date">
+  	<time datetime="2018-04-02T14:06:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h5><p>最近在编写List之间传值方法时觉得写得很繁琐。<br>一次巧合看到了慕课网上的一个视频，其中使用的Lambda表达式让我眼前一亮。代码很简洁。<br>我们学技术的还不是不要太恋旧，多学习新事物还是不错的（仅代表个人观点）</p>
+<hr>
+<blockquote>
+<p>Java 8的一个大亮点是引入Lambda表达式，使用它设计的代码会更加简洁。当开发者在编写Lambda表达式时，也会随之被编译成一个函数式接口。下面这个例子就是使用Lambda语法来代替匿名的内部类，代码不仅简洁，而且还可读。(仅代表官方看法)</p>
+</blockquote>
+<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522688827411&di=2dc515bbff73535cb7c1de296e7a8eb7&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201707%2F20%2F040539c7mm7t2azn57gvvm.png" width="200" height="140"></p>
+<ul>
+<li><p>old</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">List costList = new Arrays.asList(100,200,300) ;</span><br><span class="line">for(Integet cost : costList) &#123;</span><br><span class="line">  Integet num = cost += 5;</span><br><span class="line">  System.out.println(num);</span><br><span class="line">&#125;</span><br><span class="line">//结果</span><br><span class="line">105</span><br><span class="line">205</span><br><span class="line">305</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Java8</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//函数式编程概念map,它允许你将对象进行转换</span><br><span class="line">List costList = new Arrays.asList(100,200,300) ;</span><br><span class="line">costList.steam().map((cost) -&gt; cost += 5).foreach(System.out::println);</span><br><span class="line">//结果</span><br><span class="line">105</span><br><span class="line">205</span><br><span class="line">305</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Lambda</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/02/Lambda表达式学习（一）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-MarkDown语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -511,15 +613,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Lambda</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">单元测试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">错误</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
